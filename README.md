@@ -2,7 +2,6 @@
 
 ##### Agartha est un Rogue-like dans lequel vous évoluez dans le rôle d'un scientifique cherchant à rejoindre Agartha.
 
-Etat du projet : 0% :(
 
 
    [dill]: <https://github.com/joemccann/dillinger>
