@@ -18,5 +18,6 @@ public class EntityBehaviour : MonoBehaviour {
         {
             current = (current + 1) % path.Length;
         }
-	}
+
+    }
 }
