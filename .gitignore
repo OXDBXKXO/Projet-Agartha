@@ -38,3 +38,11 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 Thumbs.db
+Unity/Unity.sln
+*.ide-wal
+*.ide-shm
+*.lock
+*.ide
+*.sln
+Unity/Unity.sln
+Unity/.vs/Unity/v15/sqlite3/storage.ide
