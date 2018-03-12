@@ -27,7 +27,7 @@ public class PlayerControler : MonoBehaviour {
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 actions.Run();
-                y = Input.GetAxis("Vertical") * Time.deltaTime * 5.0f;
+                y = Input.GetAxis("Vertical") * Time.deltaTime * 4.0f;
             }
             else
             {
