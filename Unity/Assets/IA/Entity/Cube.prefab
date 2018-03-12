@@ -122,8 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4795436822911670, guid: 90411266e00bcb44792cb05990e7652c, type: 2}
+  - {fileID: 4048531288718974, guid: 90411266e00bcb44792cb05990e7652c, type: 2}
+  - {fileID: 4376057419068832, guid: 90411266e00bcb44792cb05990e7652c, type: 2}
+  - {fileID: 4906578943136178, guid: 90411266e00bcb44792cb05990e7652c, type: 2}
   speed: 5
