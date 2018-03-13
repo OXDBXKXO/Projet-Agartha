@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControler : MonoBehaviour {
 
@@ -10,7 +11,8 @@ public class PlayerControler : MonoBehaviour {
     void Start()
     {
         phoview = GetComponent<PhotonView>();
-        Instantiate(cam);
+        if (phoview.isMine)
+            cam.SetActive(true);
     }
 
     // Update is called once per frame
