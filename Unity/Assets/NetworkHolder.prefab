@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Version: 0.1
   AutoConnect: 1
-  PlayerPrefab: {fileID: 1376017481610148, guid: b35f433707681f3429c924c3cda1d345,
+  debug: 0
+  NetworkDebugUI: {fileID: 0}
+  PlayerPrefab: {fileID: 1431204179915624, guid: 6281fa0d94057214bb211e0a3a920a00,
     type: 2}
-  CamPrefab: {fileID: 1535950486162444, guid: 022edafe5eeff174d9477657ffa3eac2, type: 2}

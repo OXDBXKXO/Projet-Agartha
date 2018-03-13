@@ -7,6 +7,8 @@ public class NetworkController : MonoBehaviour {
 
     public string Version;
     public bool AutoConnect = true;
+    public bool debug;
+    public GameObject NetworkDebugUI;
     public GameObject PlayerPrefab;
 
     private Text status;
@@ -15,8 +17,12 @@ public class NetworkController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         PhotonNetwork.autoJoinLobby = false;
-        status = GameObject.Find("Status").GetComponent<Text> ();
-        isMaster = GameObject.Find("IsMaster").GetComponent<Text>();
+        if (debug)
+        {
+            Instantiate(NetworkDebugUI);
+            status = GameObject.Find("Status").GetComponent<Text> ();
+            isMaster = GameObject.Find("IsMaster").GetComponent<Text>();
+        }
     }
 
     
@@ -25,7 +31,8 @@ public class NetworkController : MonoBehaviour {
 	void Update () {
         if (AutoConnect && !PhotonNetwork.connected)
         {
-            status.text = "Status : Update() calling ConnectIssingSettings()";
+            if (debug)
+                status.text = "Status : Update() calling ConnectIssingSettings()";
             AutoConnect = false;
             PhotonNetwork.ConnectUsingSettings(Version);
         }
@@ -34,19 +41,22 @@ public class NetworkController : MonoBehaviour {
 
     public virtual void OnConnectedToMaster()
     {
-        status.text = "Status : OnConnectedToMaster() calling PhotonNetwork.JoinRandomRoom()";
+        if (debug)
+            status.text = "Status : OnConnectedToMaster() calling PhotonNetwork.JoinRandomRoom()";
         PhotonNetwork.JoinRandomRoom();
     }
 
     public virtual void OnJoinedLobby()
     {
-        status.text = "Status : OnJoinedLobby() calling PhotonNetwork.JoinRandomRoom()";
+        if (debug)
+            status.text = "Status : OnJoinedLobby() calling PhotonNetwork.JoinRandomRoom()";
         PhotonNetwork.JoinRandomRoom();
     }
 
     public virtual void OnPhotonRandomJoinFailed()
     {
-        status.text = "Status : OnPhotonRandomJoinFailed() calling PhotonNetwork.CreateRoom()";
+        if (debug)
+            status.text = "Status : OnPhotonRandomJoinFailed() calling PhotonNetwork.CreateRoom()";
         PhotonNetwork.CreateRoom(null, new RoomOptions() { MaxPlayers = 2 }, null);
     }
 
@@ -59,9 +69,10 @@ public class NetworkController : MonoBehaviour {
 
     public void OnJoinedRoom()
     {
-        status.text = "Status : OnJoinedRoom(). Connected !";
-
-        isMaster.text = "isMaster : " + PhotonNetwork.isMasterClient;
+        if (debug)
+            status.text = "Status : OnJoinedRoom(). Connected !";
+        if (debug)
+            isMaster.text = "isMaster : " + PhotonNetwork.isMasterClient;
 
         //Player is connected, now we need to make him spawn
 
