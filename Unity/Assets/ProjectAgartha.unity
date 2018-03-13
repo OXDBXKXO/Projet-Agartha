@@ -649,7 +649,10 @@ MonoBehaviour:
   - {fileID: 280727441}
   - {fileID: 973286771}
   speed: 15
+<<<<<<< HEAD
   RotationSpeed: 60
+=======
+>>>>>>> Louis
 --- !u!1 &1227453071
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,10 +683,17 @@ RectTransform:
   m_Father: {fileID: 106312210}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 0.8353867}
   m_AnchorMax: {x: 0.411454, y: 1}
   m_AnchoredPosition: {x: 5.5250244, y: -4.699997}
   m_SizeDelta: {x: -11.05, y: -7.4000015}
+=======
+  m_AnchorMin: {x: 0, y: 0.65638906}
+  m_AnchorMax: {x: 0.411454, y: 1}
+  m_AnchoredPosition: {x: -22.600006, y: 32.800003}
+  m_SizeDelta: {x: -67.29999, y: -82.399994}
+>>>>>>> Louis
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1227453073
 MonoBehaviour:
@@ -834,12 +844,17 @@ Prefab:
         type: 2}
       propertyPath: PlayerPrefab
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 1431204179915624, guid: a1fb941f1c1b89944ad4372ed33f2cee,
         type: 2}
     - target: {fileID: 1903284192952284, guid: 1431fce55528db3418e98f7d1f564147, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+=======
+      objectReference: {fileID: 1376017481610148, guid: b35f433707681f3429c924c3cda1d345,
+        type: 2}
+>>>>>>> Louis
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1431fce55528db3418e98f7d1f564147, type: 2}
   m_IsPrefabParent: 0
@@ -931,10 +946,17 @@ RectTransform:
   m_Father: {fileID: 106312210}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 0.8353867}
   m_AnchorMax: {x: 0.4168662, y: 1}
   m_AnchoredPosition: {x: 0.025024414, y: -0.45103455}
   m_SizeDelta: {x: -0.050049, y: 0.9}
+=======
+  m_AnchorMin: {x: 0, y: 0.65638906}
+  m_AnchorMax: {x: 0.411454, y: 1}
+  m_AnchoredPosition: {x: -27.954987, y: 37.048965}
+  m_SizeDelta: {x: -56.009995, y: -74.1}
+>>>>>>> Louis
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1659611472
 MonoBehaviour:

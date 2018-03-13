@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 08488e157b358c84b98f360a9015d039
 folderAsset: yes
 timeCreated: 1520861766
+=======
+guid: 6e3e5fea462bb924cad5af52ce0adcbd
+folderAsset: yes
+timeCreated: 1520870785
+>>>>>>> Louis
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

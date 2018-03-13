@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 8d72f6eb4e49133479a5d5fb1c2a5363
 timeCreated: 1520861817
+=======
+guid: 006ec6f53af0ad54d8676be148d99c16
+timeCreated: 1520870821
+>>>>>>> Louis
 licenseType: Free
 NativeFormatImporter:
   externalObjects: {}
