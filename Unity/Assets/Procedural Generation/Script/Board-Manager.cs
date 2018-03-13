@@ -15,6 +15,7 @@ public class BoardManager : MonoBehaviour {
             mini = min;
             maxi = max;
         }
+    }
         public int colum = 8; // number we can choose
         public int raw = 8; // we can choose as well
         public Count wallcount = new Count(5, 9); // we choose randomly the number of walls
@@ -90,4 +91,4 @@ public class BoardManager : MonoBehaviour {
   
 	
 	
-}
+
