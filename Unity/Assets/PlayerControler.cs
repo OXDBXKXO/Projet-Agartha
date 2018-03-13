@@ -4,40 +4,46 @@ using UnityEngine;
 
 public class PlayerControler : MonoBehaviour {
 
+    PhotonView phoview;
+
+    void Start()
+    {
+        phoview = GetComponent<PhotonView>();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-        
-
-        
-
-        Actions actions = GetComponent<Actions>();
-
-
-        float y = 0;
-
-
-        if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
+        if (phoview.isMine)
         {
-            actions.Stay();
-        }
-        else
-        {
-            if (Input.GetKey(KeyCode.LeftShift))
+            var x = Input.GetAxis("Horizontal") * Time.deltaTime * 250.0f;
+
+
+            Actions actions = GetComponent<Actions>();
+
+            float y = 0;
+
+
+            if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
             {
-                actions.Run();
-                y = Input.GetAxis("Vertical") * Time.deltaTime * 4.0f;
+                actions.Stay();
             }
             else
             {
-                actions.Walk();
-                y = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    actions.Run();
+                    y = Input.GetAxis("Vertical") * Time.deltaTime * 6.0f;
+                }
+                else
+                {
+                    actions.Walk();
+                    y = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+                }
             }
+
+            transform.Rotate(0, x, 0);
+            transform.Translate(0, 0, y);
         }
-
-        transform.Rotate(0, x, 0);
-        transform.Translate(0, 0, y);
-
     }
 }
