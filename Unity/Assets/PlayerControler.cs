@@ -5,10 +5,12 @@ using UnityEngine;
 public class PlayerControler : MonoBehaviour {
 
     PhotonView phoview;
+    public GameObject cam;
 
     void Start()
     {
         phoview = GetComponent<PhotonView>();
+        Instantiate(cam);
     }
 
     // Update is called once per frame
@@ -23,6 +25,8 @@ public class PlayerControler : MonoBehaviour {
 
             float y = 0;
 
+            if (Input.GetKey(KeyCode.Space))
+                actions.Death();
 
             if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
             {

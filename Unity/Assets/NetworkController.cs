@@ -8,7 +8,6 @@ public class NetworkController : MonoBehaviour {
     public string Version;
     public bool AutoConnect = true;
     public GameObject PlayerPrefab;
-    public GameObject CamPrefab;
 
     private Text status;
     private Text isMaster;
@@ -67,6 +66,5 @@ public class NetworkController : MonoBehaviour {
         //Player is connected, now we need to make him spawn
 
         PhotonNetwork.Instantiate(PlayerPrefab.name, PlayerPrefab.transform.position, Quaternion.identity, 0);
-        PhotonNetwork.Instantiate(CamPrefab.name, CamPrefab.transform.position, Quaternion.identity, 0);
     }
 }
