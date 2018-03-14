@@ -7,18 +7,19 @@ public class PlayerControler : MonoBehaviour {
 
     PhotonView phoview;
     public GameObject cam;
+    public bool Online;
 
     void Start()
     {
         phoview = GetComponent<PhotonView>();
-        if (phoview.isMine)
+        if (phoview.isMine || !Online)
             cam.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (phoview.isMine)
+        if (phoview.isMine || !Online)
         {
             var x = Input.GetAxis("Horizontal") * Time.deltaTime * 250.0f;
 
