@@ -48,7 +48,7 @@ Unity/Builds/*
 Assets/AssetStoreTools*
 
 # Visual Studio 2015 cache directory
-Unity/.vs/
+Unity/.vs/*
 
 
 # Debug
@@ -80,3 +80,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Unity/.vs/Unity/v15/Server/sqlite3/storage.ide
