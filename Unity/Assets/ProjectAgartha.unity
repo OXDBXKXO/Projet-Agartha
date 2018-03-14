@@ -243,7 +243,7 @@ Prefab:
     - target: {fileID: 114281853880510110, guid: 1431fce55528db3418e98f7d1f564147,
         type: 2}
       propertyPath: debug
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114281853880510110, guid: 1431fce55528db3418e98f7d1f564147,
         type: 2}
