@@ -13,15 +13,25 @@ public class NetworkController : MonoBehaviour {
 
     private Text status;
     private Text isMaster;
+    private bool internet;
 
     // Use this for initialization
     void Start () {
         PhotonNetwork.autoJoinLobby = false;
-        if (debug)
+        PlayerControler PlayerControlerObj = PlayerPrefab.GetComponent<PlayerControler>();
+        internet = PlayerControlerObj.Online;
+        if (internet)
         {
-            Instantiate(NetworkDebugUI);
-            status = GameObject.Find("Status").GetComponent<Text> ();
-            isMaster = GameObject.Find("IsMaster").GetComponent<Text>();
+            if (debug)
+            {
+                Instantiate(NetworkDebugUI);
+                status = GameObject.Find("Status").GetComponent<Text>();
+                isMaster = GameObject.Find("IsMaster").GetComponent<Text>();
+            }
+        }
+        else
+        {
+            Instantiate(PlayerPrefab);
         }
     }
 
@@ -29,7 +39,7 @@ public class NetworkController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (AutoConnect && !PhotonNetwork.connected)
+        if (AutoConnect && !PhotonNetwork.connected && internet)
         {
             if (debug)
                 status.text = "Status : Update() calling ConnectIssingSettings()";
